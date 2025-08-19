@@ -1,5 +1,5 @@
 // Esses são os símbolos do caça-níquel (os emojis)
-const symbols = ["🍒", "🍋", "🍉", "⭐", "7️⃣"];
+const symbols = ["💯", "🐯", "4️⃣", "⭐", "☠︎"];
 
 // Pega os três espaços onde vai mostrar os símbolos
 const reels = [
@@ -14,7 +14,7 @@ const resultDiv = document.getElementById("result");
 const balanceSpan = document.getElementById("balance");
 
 // Começa com 100 créditos
-let balance = 100;
+let balance = 200;
 
 // Cada jogada custa 10 créditos
 const costPerPlay = 10;
@@ -45,10 +45,10 @@ spinBtn.addEventListener("click", () => {
   let spins = [0, 0, 0];
 
   // Quantas vezes as roletas vão girar pra animar
-  const maxSpins = 20;
+  const maxSpins = 10;
 
   // Quanto tempo entre cada troca de símbolo (em milissegundos)
-  const spinInterval = 80;
+  const spinInterval = 50;
 
   let count = 0;
 
@@ -75,12 +75,12 @@ spinBtn.addEventListener("click", () => {
       // Se os 3 símbolos forem iguais, ganha créditos extras
       if (spins[0] === spins[1] && spins[1] === spins[2]) {
         balance += bonusWin;
-        resultDiv.textContent = `Parabéns! Você ganhou ${bonusWin} créditos!`;
+        resultDiv.textContent = `Parabéns! Tigrinho soltou a carta ${bonusWin} créditos!`;
         resultDiv.style.color = "#4CAF50"; // verde pra vitória
       } else {
         // Se não
-        resultDiv.textContent = "Tigrinho não pagou!";
-        resultDiv.style.color = "#ffb800"; // amarelo
+        resultDiv.textContent = "Tigrinho fdp";
+        resultDiv.style.color = "#000000"; // vermelho 
       }
 
       // Atualiza o saldo na tela
